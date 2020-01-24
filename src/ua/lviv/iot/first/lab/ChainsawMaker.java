@@ -4,9 +4,9 @@ public class ChainsawMaker {
     static final int objectCount = 4;
 
     public static void main(String[] args) {
-        Chainsaw powerfulChainsaw = new Chainsaw(2000, 150, 3, "Ukraine", "rough");
-        Chainsaw badChainsaw = new Chainsaw(200, 50, 1, "Egypt", "thin");
-        Chainsaw niceChainsaw = new Chainsaw(1000, 100, 2, "Japan", "long");
+        Chainsaw powerfulChainsaw = new Chainsaw("Still", 150, 3, 2, "rough");
+        Chainsaw badChainsaw = new Chainsaw("Baser", 50, 1, 8, "thin");
+        Chainsaw niceChainsaw = new Chainsaw("Gang", 100, 2, 3, "long");
 
         System.out.println(powerfulChainsaw);
         System.out.println(badChainsaw);
@@ -39,4 +39,3 @@ public class ChainsawMaker {
         }
     }
 }
-

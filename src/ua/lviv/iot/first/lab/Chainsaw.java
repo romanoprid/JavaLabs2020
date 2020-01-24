@@ -13,25 +13,25 @@ public class Chainsaw {
     public static String useType;
 
     public Chainsaw() {
-        this(0, 0, 0, null, null, null);
+        this(null, 0, 0, 0, null, null);
     }
 
-    public Chainsaw(int powerInVat, int amountOfTurns, float volumeOfBak, String country, String form, String description) {
+    public Chainsaw(String name, int powerInVat, int amountOfTurns, float tankVolume, String country, String form, String description) {
         this.name = name;
         this.powerInVat = powerInVat;
         this.turnsAmount = amountOfTurns;
-        this.tankVolume = volumeOfBak;
+        this.tankVolume = tankVolume;
         this.country = country;
         this.form = form;
         this.description = description;
     }
 
-    public Chainsaw(int powerInVat, int amountOfTurns, float volumeOfBak, String country, String form) {
-        this(powerInVat, amountOfTurns, volumeOfBak, country, form, "Very sharp");
+    public Chainsaw(String name, int powerInVat, int amountOfTurns, float tankVolume, String country, String form) {
+        this(name, powerInVat, amountOfTurns, tankVolume, country, form, "Very sharp");
     }
 
-    public Chainsaw(int powerInVat, int amountOfTurns, float volumeOfBak, String country) {
-        this(powerInVat, amountOfTurns, volumeOfBak, country, null);
+    public Chainsaw(String name, int powerInVat, int amountOfTurns, float tankVolume, String country) {
+        this(name, powerInVat, amountOfTurns, tankVolume, country, null);
     }
 
     public String getName() {
@@ -58,12 +58,12 @@ public class Chainsaw {
         this.turnsAmount = amountOfTurns;
     }
 
-    public float getVolumeOfBak() {
+    public float getTankVolume() {
         return tankVolume;
     }
 
-    public void setVolumeOfBak(float volumeOfBak) {
-        this.tankVolume = volumeOfBak;
+    public void setTankVolume(float tan) {
+        this.tankVolume = tankVolume;
     }
 
     public String getCountry() {
@@ -100,7 +100,7 @@ public class Chainsaw {
                 "name='" + name + '\'' +
                 ", powerInVat=" + powerInVat +
                 ", amountOfTurns=" + turnsAmount +
-                ", volumeOfBak=" + tankVolume +
+                ", tankVolume=" + tankVolume +
                 ", country='" + country + '\'' +
                 ", form='" + form + '\'' +
                 ", description='" + description + '\'' +
