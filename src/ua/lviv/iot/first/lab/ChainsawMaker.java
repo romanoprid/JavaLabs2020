@@ -1,5 +1,6 @@
 package ua.lviv.iot.first.lab;
 
+
 public class ChainsawMaker {
     static final int objectCount = 4;
 
@@ -14,6 +15,7 @@ public class ChainsawMaker {
 
         Chainsaw.setUseType("Domestic");
 
+        System.out.println();
 
         System.out.println(powerfulChainsaw);
         System.out.println(badChainsaw);
@@ -22,20 +24,110 @@ public class ChainsawMaker {
 
         Chainsaw.setUseType("Industrial");
 
+        System.out.println();
 
         System.out.println(powerfulChainsaw);
         System.out.println(badChainsaw);
         System.out.println(niceChainsaw);
 
-        Chainsaw[] array = new Chainsaw[objectCount];
+        Chainsaw[] chainsaws = new Chainsaw[objectCount];
         int i = 0;
         while (i < objectCount) {
-            array[i] = new Chainsaw();
+            chainsaws[i] = new Chainsaw();
             i++;
         }
-        System.out.println("\n Elements of array");
-        for (Chainsaw chainsaw : array) {
+        System.out.println("\n Elements of chainsaws");
+        for (Chainsaw chainsaw : chainsaws) {
             System.out.println(chainsaw);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

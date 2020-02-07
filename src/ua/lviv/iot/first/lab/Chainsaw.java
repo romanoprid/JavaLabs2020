@@ -1,7 +1,8 @@
 package ua.lviv.iot.first.lab;
 
-public class Chainsaw {
-    private static final String fuel = "petrol";
+public class Chainsaw //implements Comparable<Chainsaw>
+{
+    private static final String FUEL = "petrol";
 
     private String name;
     private int powerInVat;
@@ -17,14 +18,9 @@ public class Chainsaw {
     }
 
     public Chainsaw(String name, int powerInVat, int amountOfTurns, float tankVolume, String country, String form, String description) {
-        this.name = name;
-        this.powerInVat = powerInVat;
-        this.turnsAmount = amountOfTurns;
-        this.tankVolume = tankVolume;
-        this.country = country;
-        this.form = form;
-        this.description = description;
+        resetValues(name, powerInVat, amountOfTurns, tankVolume, country, form, description);
     }
+
 
     public Chainsaw(String name, int powerInVat, int amountOfTurns, float tankVolume, String country, String form) {
         this(name, powerInVat, amountOfTurns, tankVolume, country, form, "Very sharp");
@@ -32,6 +28,17 @@ public class Chainsaw {
 
     public Chainsaw(String name, int powerInVat, int amountOfTurns, float tankVolume, String country) {
         this(name, powerInVat, amountOfTurns, tankVolume, country, null);
+    }
+
+    public void resetValues(String name, int powerInVat, int amountOfTurns, float tankVolume, String country,
+                            String form, String description) {
+        this.name = name;
+        this.powerInVat = powerInVat;
+        this.turnsAmount = amountOfTurns;
+        this.tankVolume = tankVolume;
+        this.country = country;
+        this.form = form;
+        this.description = description;
     }
 
     public String getName() {
@@ -62,7 +69,7 @@ public class Chainsaw {
         return tankVolume;
     }
 
-    public void setTankVolume(float tan) {
+    public void setTankVolume(float tankVolume) {
         this.tankVolume = tankVolume;
     }
 
@@ -104,7 +111,10 @@ public class Chainsaw {
                 ", country='" + country + '\'' +
                 ", form='" + form + '\'' +
                 ", description='" + description + '\'' +
-                ", ***String fuel***='" + Chainsaw.fuel + '\'' +
+                ", ***String fuel***='" + Chainsaw.FUEL + '\'' +
                 '}';
+
     }
 }
+
+
